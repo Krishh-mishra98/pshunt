@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data In New File</title>
+<style>
+    body{
+        background-color: white;
+        padding:30px;
+    }
+    .newdata{
+        height:504px;
+        width:404px;
+        background-color: lightslategrey;
+        margin: 0 auto;
+    }
+    .data{
+        height:500px;
+        width:400px;
+        margin:0 auto;
+        border:2px solid rgb(21, 3, 70);
+        box-shadow: 2px 2px 3px black;
+    }
+    p{
+        color: cornsilk;
+        border-bottom: 1px solid black;
+    }
+    p,h3,h5{
+        padding-left: 10px;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="newdata">
+        <div class="data">
+            <h3>GENERATED DATA</h3>
+            <h5>First Name :</h5>
+            <p id="NewFirstName"></p>
+            <h5>Last Name :</h5>
+            <p id="NewLastName"></p>
+            <h5>Age :</h5>
+            <p id="NewAge"></p>
+            <h5>Email Id :</h5>
+            <p id="NewEmail"></p>
+            <h5>Password :</h5>
+            <p id="NewPassword"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("NewFirstName").innerHTML = localStorage.getItem("FirstName");
+        document.getElementById("NewLastName").innerHTML = localStorage.getItem("LastName");
+        document.getElementById("NewAge").innerHTML = localStorage.getItem("Age");
+        document.getElementById("NewEmail").innerHTML = localStorage.getItem("Email");
+        document.getElementById("NewPassword").innerHTML = localStorage.getItem("Password");
+    </script>
+</body>
+</html>
